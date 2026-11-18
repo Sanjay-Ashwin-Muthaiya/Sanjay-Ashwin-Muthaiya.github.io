@@ -192,15 +192,18 @@ footer{padding:28px 0 40px;font-size:13px;color:var(--faint);display:flex;justif
       <a class="btn" href="https://github.com/Sanjay-Ashwin-Muthaiya" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
         GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/sanjay-ashwin-muthaiya-3312991b2/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+        LinkedIn</a>
       <a class="btn" href="#experience">Experience ↓</a>
     </div>
   </header>
 
   <div class="stats" role="list">
     <div class="stat" role="listitem"><div class="n">5+ yrs</div><div class="l">at Full Creative, since Jul 2021</div></div>
-    <div class="stat" role="listitem"><div class="n">466</div><div class="l">merged pull requests across 7 repos</div></div>
-    <div class="stat" role="listitem"><div class="n">471</div><div class="l">Jira issues worked on, 429 done</div></div>
-    <div class="stat" role="listitem"><div class="n">42</div><div class="l">design &amp; technical docs authored</div></div>
+    <div class="stat" role="listitem"><div class="n">2.25 s</div><div class="l">contact-view LCP, down from 6.8 s</div></div>
+    <div class="stat" role="listitem"><div class="n">7.6M</div><div class="l">fewer API requests a month (24%)</div></div>
+    <div class="stat" role="listitem"><div class="n">87%</div><div class="l">faster production builds</div></div>
   </div>
 
   <section id="work">
@@ -210,7 +213,7 @@ footer{padding:28px 0 40px;font-size:13px;color:var(--faint);display:flex;justif
       <div>
         <span class="tag">Build performance</span>
         <h3>Production builds about 87% faster with Rspack</h3>
-        <p>I benchmarked Webpack 5 against Rspack on the Contacts codebase, comparing build time, raw bundle size and Gzip/Brotli output, then migrated the production build. The transpiler moved from Babel and ts-loader to SWC, and CI builds dropped from about 30 seconds to under 10.</p>
+        <p>I benchmarked Webpack 5 against Rspack on the Contacts codebase, comparing build time, raw bundle size and Gzip/Brotli output, then migrated the production build. The transpiler moved from Babel and ts-loader to SWC, and production builds dropped from 29.5 seconds to 3.8 seconds.</p>
         <div class="chips"><span class="chip">Rspack</span><span class="chip">SWC</span><span class="chip">Webpack 5</span><span class="chip">CI/CD</span></div>
       </div>
       <div class="compare" aria-label="Production build time comparison">
@@ -237,7 +240,7 @@ footer{padding:28px 0 40px;font-size:13px;color:var(--faint);display:flex;justif
         <span class="tag">Architecture</span>
         <h3>Micro-frontends with Module Federation</h3>
         <p>I exposed profile, business and contact components to host apps through Webpack Module Federation, and brought in calendar-sync and scheduling remotes. This lets one Contacts codebase serve web, desktop and partner apps.</p>
-        <div class="chips"><span class="chip">Module Federation</span><span class="chip">React 18</span></div>
+        <div class="chips"><span class="chip">Module Federation</span><span class="chip">React</span></div>
       </article>
       <article class="card">
         <span class="tag">Design system</span>
@@ -247,21 +250,21 @@ footer{padding:28px 0 40px;font-size:13px;color:var(--faint);display:flex;justif
       </article>
       <article class="card">
         <span class="tag">Performance</span>
-        <h3>Faster contact detail view</h3>
-        <p>I removed in-component routing, cut re-renders and duplicate API calls, and replaced IndexedDB caches with Redux state. I documented the results so other teams could apply the same patterns.</p>
-        <div class="chips"><span class="chip">Redux</span><span class="chip">Profiling</span></div>
+        <h3>Contact view load time: 6.8 s to 2.25 s</h3>
+        <p>I replaced route-based rendering with single-page updates and cut re-renders and duplicate API calls. Largest Contentful Paint fell from 6.8 s to 2.25 s and the Lighthouse performance score rose from 13 to 53, while SEO and accessibility scores held steady.</p>
+        <div class="chips"><span class="chip">Redux</span><span class="chip">Lighthouse</span><span class="chip">Profiling</span></div>
       </article>
       <article class="card">
-        <span class="tag">Data</span>
-        <h3>Spanner-backed contact search</h3>
-        <p>I moved contact search from Elasticsearch and IndexedDB to a Spanner-backed search API. The work included HIPAA-account handling, duplicate detection and account mapping.</p>
-        <div class="chips"><span class="chip">Cloud Spanner</span><span class="chip">REST</span><span class="chip">HIPAA</span></div>
+        <span class="tag">API traffic</span>
+        <h3>7.6M fewer requests a month</h3>
+        <p>Setmore called the same business API up to five times on load. I added in-memory caching at the SDK level, cutting average monthly requests by about 24%. I also traced a stale-state bug that fired up to 6,700 duplicate calls; it didn't recur in a week of monitoring.</p>
+        <div class="chips"><span class="chip">SDK</span><span class="chip">Caching</span><span class="chip">Sentry</span></div>
       </article>
       <article class="card">
-        <span class="tag">AI engineering</span>
-        <h3>Agent skills for the team</h3>
-        <p>I wrote Claude Code and Cursor agent skills for investigating live tickets, preparing production builds and creating pull requests. The Contacts team uses them every day.</p>
-        <div class="chips"><span class="chip">Claude Code</span><span class="chip">Cursor</span><span class="chip">MCP</span></div>
+        <span class="tag">Security</span>
+        <h3>aw-sso-helper</h3>
+        <p>I created aw-sso-helper, a Node.js npm package that authenticates server-to-server calls with the scopes each API requires. It started as a new repository and is now used by several teams across the organisation.</p>
+        <div class="chips"><span class="chip">Node.js</span><span class="chip">npm</span><span class="chip">SSO</span></div>
       </article>
     </div>
   </section>
@@ -276,8 +279,11 @@ footer{padding:28px 0 40px;font-size:13px;color:var(--faint);display:flex;justif
         <ul>
           <li>I own the <b>Contacts micro-frontend</b>, which runs inside Setmore, AnywhereWorks and answering-service apps. I've merged <b>401 PRs</b> to the component and <b>31</b> to the companion Contacts SDK.</li>
           <li>Built shared libraries (<b>aw-utility, business utilities</b>): an avatar standard and React avatar component, a phone component, and country and currency lists. I also moved them from npm to pnpm and automated publishing.</li>
+          <li>Cut contact-view load time from <b>6.8 s to 2.25 s</b>, removed about <b>7.6M redundant API requests a month</b>, and made production builds <b>87% faster</b> with Rspack.</li>
+          <li>Created <b>aw-sso-helper</b>, an npm package for scoped server-to-server authentication used by several teams.</li>
           <li>Introduced <b>Playwright</b> component tests using the Page Object Model and added E2E automation. Moved deployment to <b>Cloud Run</b>.</li>
-          <li>Hardened security and compliance: role-based permissions, HIPAA/FHIR data flows, cross-account restrictions, dependency vulnerability upgrades, Sentry tracing and SonarQube clean-up.</li>
+          <li>Hardened security and compliance: role-based permissions, HIPAA/FHIR data flows, cross-account restrictions, dependency vulnerability upgrades and Sentry tracing. Cleared <b>131 SonarQube issues</b> after the 10.3 upgrade.</li>
+          <li>Wrote Claude Code and Cursor agent skills for live-ticket investigation, production build preparation and pull requests, used daily by the Contacts team.</li>
           <li>Ran code-review sessions and wrote a "React Component – Expected Standards" guide for the team. I was also postmortem owner for a production incident.</li>
         </ul>
       </div>
@@ -288,8 +294,9 @@ footer{padding:28px 0 40px;font-size:13px;color:var(--faint);display:flex;justif
         <ul>
           <li>Built campaign features for the <b>ChatSupport</b> live-chat platform: running campaigns from the dashboard, storing delivery events, detailed campaign statistics, unsubscribe filtering and webhooks.</li>
           <li>Added <b>rate limiting</b> to password-reset emails, automated campaign APIs and widget traffic.</li>
-          <li>Built the <b>ChatSupport ↔ AnywhereWorks Connect</b> integration (incoming-chat pop-ups, presence, overflow routing), fixed multi-agent routing bugs and upgraded it to <b>React 18</b>.</li>
-          <li>Contributed to the <b>RTM SDK</b>: Secret Manager integration, full auth, trace-ID logging and an SSO JavaScript helper.</li>
+          <li>Built the <b>ChatSupport ↔ AnywhereWorks Connect</b> integration (incoming-chat pop-ups, presence, overflow routing), fixed multi-agent routing bugs and upgraded its <b>React</b> version.</li>
+          <li>Built <b>Node.js WebSocket</b> services for real-time visitor-to-staff chat, and Java APIs for widget settings and chat routing.</li>
+          <li>Contributed to the <b>RTM SDK</b>: Secret Manager integration, full auth and trace-ID logging.</li>
         </ul>
       </div>
     </div>
@@ -299,7 +306,7 @@ footer{padding:28px 0 40px;font-size:13px;color:var(--faint);display:flex;justif
     <div class="sec-head"><span class="num mono">03</span><h2>By the numbers</h2></div>
     <div class="two">
       <div class="panel">
-        <h3>Merged PRs by repository</h3>
+        <h3>Merged PRs by repository · 466 total</h3>
         <div class="hbar"><span class="name">Contacts component</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="val">401</span></div>
         <div class="hbar"><span class="name">Contacts SDK</span><div class="track"><div class="fill" style="width:7.7%"></div></div><span class="val">31</span></div>
         <div class="hbar"><span class="name">AW utility</span><div class="track"><div class="fill" style="width:4.5%"></div></div><span class="val">18</span></div>
@@ -316,7 +323,7 @@ footer{padding:28px 0 40px;font-size:13px;color:var(--faint);display:flex;justif
           <div class="col"><span class="v">141</span><div class="bar" style="height:75%"></div><span class="y">2025</span></div>
           <div class="col"><span class="v">189</span><div class="bar" style="height:100%"></div><span class="y">2026*</span></div>
         </div>
-        <div class="foot">*2026 runs to mid-November. Earlier ChatSupport work was tracked in Jira, not in these repositories.</div>
+        <div class="foot">*2026 runs to mid-November. Earlier ChatSupport work was tracked in Jira, not in these repositories. Overall: 471 Jira issues and 42 design and technical docs.</div>
       </div>
     </div>
   </section>
@@ -325,9 +332,9 @@ footer{padding:28px 0 40px;font-size:13px;color:var(--faint);display:flex;justif
     <div class="sec-head"><span class="num mono">04</span><h2>Skills</h2></div>
     <div class="skills">
       <div class="skill"><h3>Languages</h3><p>TypeScript, JavaScript (ES2020+), HTML5, CSS3, Python</p></div>
-      <div class="skill"><h3>Frontend</h3><p>React 18, Redux, Module Federation micro-frontends, Web Workers, IndexedDB, PWA, accessible UI</p></div>
+      <div class="skill"><h3>Frontend</h3><p>React, Redux, Module Federation micro-frontends, Web Workers, IndexedDB, PWA, accessible UI</p></div>
       <div class="skill"><h3>Design systems</h3><p>EDS adoption, reusable component libraries, npm publishing, pnpm workspaces and monorepos</p></div>
-      <div class="skill"><h3>Build &amp; cloud</h3><p>Rspack, Webpack, CI/CD, Google Cloud (Cloud Run, Storage, App Engine, Spanner), Elasticsearch</p></div>
+      <div class="skill"><h3>Build &amp; cloud</h3><p>Rspack, Webpack, CI/CD, Google Cloud (Cloud Run, Storage, App Engine)</p></div>
       <div class="skill"><h3>Quality</h3><p>Playwright component &amp; E2E tests, SonarQube, Sentry, analytics instrumentation</p></div>
       <div class="skill"><h3>Ways of working</h3><p>Agile/Scrum, DACI decisions, incident postmortems, code review, Claude Code and Cursor agent skills</p></div>
     </div>
@@ -354,7 +361,8 @@ footer{padding:28px 0 40px;font-size:13px;color:var(--faint);display:flex;justif
     <div class="sec-head"><span class="num mono">06</span><h2>Education</h2></div>
     <div class="panel">
       <h3 style="margin-bottom:6px">2014 — 2018</h3>
-      <div class="serif" style="font-size:22px;font-weight:650">KPR Institute of Engineering and Technology</div>
+      <div class="serif" style="font-size:22px;font-weight:650">Bachelor of Engineering, Computer Science and Engineering</div>
+      <div>KPR Institute of Engineering and Technology</div>
       <div style="color:var(--muted)">Coimbatore, Tamil Nadu</div>
     </div>
   </section>
@@ -364,6 +372,7 @@ footer{padding:28px 0 40px;font-size:13px;color:var(--faint);display:flex;justif
     <p>I'm interested in front-end platform, design-system and developer-experience roles. Email is the fastest way to reach me.</p>
     <div class="links">
       <a class="btn primary" href="mailto:asanjaysiva@gmail.com">Email me</a>
+      <a class="btn" href="https://www.linkedin.com/in/sanjay-ashwin-muthaiya-3312991b2/" target="_blank" rel="noopener">LinkedIn</a>
       <a class="btn" href="https://github.com/Sanjay-Ashwin-Muthaiya" target="_blank" rel="noopener">GitHub</a>
     </div>
   </div>
